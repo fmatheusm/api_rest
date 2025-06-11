@@ -1,0 +1,27 @@
+# Node.js
+node_modules/
+*.jpg
+# Logs
+*.log
+npm-debug.log*
+# Environment variables
+.env
+# Build output
+#dist/
+#build/
+# System files
+.DS_Store
+Thumbs.db
+# npm cache
+.npm
+# eslint cache
+.eslintcache
+# node REPL history
+.node_repl_history
+# pid files
+*.pid
+*.seed
+*.lock
+*lock.json
+# next.js
+.next
