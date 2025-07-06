@@ -1,3 +1,4 @@
+/// <reference types='cypress' />
 const url = 'apiRestAluno';
 Cypress.env('baseUrl', url);
 const usersRout = Cypress.env('users');
@@ -5,13 +6,13 @@ const usersRout = Cypress.env('users');
 const id = '';
 const auth = '';
 
-describe('Teste api alunos', () => {
+describe('Buscar usuários', () => {
   it('Index alunos', () => {
     cy.getGenerico(usersRout, id, auth).then(response => {
       console.log(response.body);
       expect(response.status).to.eq(200);
       expect(response.body).to.be.an('array');
-      cy.validaContrato('index200.json', response.body);
+      cy.validaContrato('user/index200.json', response.body);
     });
   });
   it('Show aluno', () => {
@@ -19,7 +20,8 @@ describe('Teste api alunos', () => {
       console.log(response.body);
       expect(response.status).to.eq(200);
       expect(response.body.nome).to.be.equal('Joaquin EDITADO');
-      cy.validaContrato('show200.json', response.body);
+      expect(response.body).to.have.property('id', 1);
+      cy.validaContrato('user/show200.json', response.body);
     });
   });
 });

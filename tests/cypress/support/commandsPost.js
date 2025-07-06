@@ -2,7 +2,7 @@ Cypress.Commands.add('postGenerico', (endpoint, bodyRequest, auth) => {
   const baseUrl = Cypress.env('baseUrl');
   const requestUrl = endpoint.startsWith('http') ? endpoint : Cypress.env(baseUrl) + endpoint;
   cy.request({
-    method: 'GET',
+    method: 'POST',
     url: requestUrl,
     failOnStatusCode: false,
     body: bodyRequest,
@@ -13,11 +13,11 @@ Cypress.Commands.add('postGenerico', (endpoint, bodyRequest, auth) => {
   });
 });
 
-Cypress.Commands.add('getQsBody', (endpoint, queryString, bodyRequest, auth) => {
+Cypress.Commands.add('postQsBody', (endpoint, queryString, bodyRequest, auth) => {
   const baseUrl = Cypress.env('baseUrl');
   const requestUrl = endpoint.startsWith('http') ? endpoint : Cypress.env(baseUrl) + endpoint;
   cy.request({
-    method: 'GET',
+    method: 'POST',
     url: requestUrl,
     failOnStatusCode: false,
     qs: queryString,

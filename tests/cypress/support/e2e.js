@@ -19,6 +19,8 @@ import './commandsApi';
 import './commandsGet';
 import './commandsPost';
 import './commandsDelete';
+import './commandsPut';
+import './commandsPut';
 
 
 import chai from 'chai';
