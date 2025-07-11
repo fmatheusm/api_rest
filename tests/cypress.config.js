@@ -1,3 +1,4 @@
+/// <reference types="cypress"/>
 const { defineConfig } = require('cypress');
 /**
  * @type {Cypress.PluginConfig}

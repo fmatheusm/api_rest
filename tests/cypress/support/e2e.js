@@ -15,8 +15,12 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands';
-import './commandsGet';
 import './commandsApi';
+import './commandsGet';
+import './commandsPost';
+import './commandsDelete';
+import './commandsPut';
+import './commandsPut';
 
 
 import chai from 'chai';
@@ -24,7 +28,6 @@ import chaiJsonSchema from 'chai-json-schema';
 
 chai.use(chaiJsonSchema);
 cy.chai = chai;
-
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   return false;
