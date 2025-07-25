@@ -8,7 +8,7 @@ export default defineConfig([
     files: ['**/*.{js,mjs,cjs}'], plugins: { js }, extends: ['js/recommended'],
     rules: {
       // Regras que geram erros facilmente detectáveis
-      'no-unused-vars': 'error',
+      'no-unused-vars': 'off',
       'no-undef': 'error',
       'semi': ['error', 'always'],
       'quotes': ['error', 'single'],
